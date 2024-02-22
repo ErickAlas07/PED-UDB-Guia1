@@ -35,6 +35,7 @@ namespace Ejercicio1
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.Location = new System.Drawing.Point(36, 24);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(566, 393);
@@ -44,21 +45,25 @@ namespace Ejercicio1
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("Century", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
+            this.listBox1.ItemHeight = 21;
             this.listBox1.Items.AddRange(new object[] {
             "Círculo",
-            "Rectángulo"});
-            this.listBox1.Location = new System.Drawing.Point(624, 24);
+            "Rectángulo",
+            "Polígono",
+            "Curva"});
+            this.listBox1.Location = new System.Drawing.Point(608, 24);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(139, 84);
+            this.listBox1.Size = new System.Drawing.Size(146, 109);
             this.listBox1.TabIndex = 1;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(760, 450);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";

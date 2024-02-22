@@ -29,26 +29,59 @@ namespace Ejercicio1
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            Graphics g = panel1.CreateGraphics(); //Zona para el dibujo
-            Pen lapiz = new Pen(Color.Black); //Declarar color del Pen a usar
+            Graphics g = panel1.CreateGraphics();
+            Pen lapiz = new Pen(Color.Black);
+            Random random = new Random();
+            Color randomColor = Color.FromArgb(random.Next(256), random.Next(256), random.Next(256));
+            int randomSize = random.Next(50, 100);
 
-            //En caso de seleccionar círculo
-            if(listBox1.SelectedIndex == 0)
+            if (listBox1.SelectedIndex == 0)
             {
-                SolidBrush sb = new SolidBrush(Color.Red); //Brush en rojo 
-                //Dibujará una elipse usando el Pen, en posiciones x,y - 50; y dimensiones 100
-                g.DrawEllipse(lapiz, x - 50, y - 50, 100, 100);
-                g.FillEllipse(sb, x - 50, y - 50, 100, 100); //Rellenar la elipse de color rojo 
+                SolidBrush sb = new SolidBrush(randomColor);
+                g.DrawEllipse(lapiz, x - 50, y - 50, randomSize, randomSize);
+                g.FillEllipse(sb, x - 50, y - 50, randomSize, randomSize);
             }
 
-            //En caso de seleccionar rectángulo
-            if (listBox1.SelectedIndex == 1)
+            else if (listBox1.SelectedIndex == 1)
             {
-                SolidBrush sb = new SolidBrush(Color.Green); //Brush en verde
-                //Dibujará rectángulo usando el Pen, en posiciones x,y - 50; y dimensiones 100
-                g.DrawRectangle(lapiz, x - 50, y - 50, 100, 100);
-                g.FillRectangle(sb, x - 50, y - 50, 100, 100); //Rellenar el rectángulo de color verde
+                SolidBrush sb = new SolidBrush(randomColor);
+                g.DrawRectangle(lapiz, x - 50, y - 50, randomSize, randomSize);
+                g.FillRectangle(sb, x - 50, y - 50, randomSize, randomSize);
+            }
+
+            else if (listBox1.SelectedIndex == 2)
+            {
+                SolidBrush sb = new SolidBrush(randomColor);
+
+                //Array de puntos para representar los vértices del polígono
+                Point[] points = new Point[4];
+                points[0] = new Point(x + randomSize, y - randomSize);
+                points[1] = new Point(x - randomSize, y + randomSize);
+                points[2] = new Point(x + randomSize, y + randomSize);
+                points[3] = new Point(x + randomSize, y - 50);
+
+                // Dibujar y rellenar el polígono
+                g.DrawPolygon(lapiz, points);
+                g.FillPolygon(sb, points);
+            }
+
+            else if (listBox1.SelectedIndex == 3)
+            {
+                SolidBrush sb = new SolidBrush(randomColor);
+
+                // Array de puntos para representar los vértices de la curva
+                Point[] points = new Point[4];
+                points[0] = new Point(x - randomSize, y - randomSize);
+                points[1] = new Point(x - randomSize, y + randomSize);
+                points[2] = new Point(x + randomSize, y + randomSize);
+                points[3] = new Point(x + randomSize, y - randomSize);
+
+                // Dibujar y rellenar la curva
+                g.DrawCurve(lapiz, points);
+                g.FillClosedCurve(sb, points);
             }
         }
+
+
     }
 }

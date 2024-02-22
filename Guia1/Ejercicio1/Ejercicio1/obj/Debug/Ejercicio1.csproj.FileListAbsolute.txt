@@ -8,3 +8,13 @@
 \\PROYECTOS\Users\Public\PED - UDB\Guia1\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.csproj.CoreCompileInputs.cache
 \\PROYECTOS\Users\Public\PED - UDB\Guia1\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.exe
 \\PROYECTOS\Users\Public\PED - UDB\Guia1\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.pdb
+\\PROYECTOS\Users\Public\PED-UDB-Guia1\Guia1\Ejercicio1\Ejercicio1\bin\Debug\Ejercicio1.exe.config
+\\PROYECTOS\Users\Public\PED-UDB-Guia1\Guia1\Ejercicio1\Ejercicio1\bin\Debug\Ejercicio1.exe
+\\PROYECTOS\Users\Public\PED-UDB-Guia1\Guia1\Ejercicio1\Ejercicio1\bin\Debug\Ejercicio1.pdb
+\\PROYECTOS\Users\Public\PED-UDB-Guia1\Guia1\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.csproj.AssemblyReference.cache
+\\PROYECTOS\Users\Public\PED-UDB-Guia1\Guia1\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.Form1.resources
+\\PROYECTOS\Users\Public\PED-UDB-Guia1\Guia1\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.Properties.Resources.resources
+\\PROYECTOS\Users\Public\PED-UDB-Guia1\Guia1\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.csproj.GenerateResource.cache
+\\PROYECTOS\Users\Public\PED-UDB-Guia1\Guia1\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.csproj.CoreCompileInputs.cache
+\\PROYECTOS\Users\Public\PED-UDB-Guia1\Guia1\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.exe
+\\PROYECTOS\Users\Public\PED-UDB-Guia1\Guia1\Ejercicio1\Ejercicio1\obj\Debug\Ejercicio1.pdb

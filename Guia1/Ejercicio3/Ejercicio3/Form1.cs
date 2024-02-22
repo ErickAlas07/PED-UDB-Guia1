@@ -153,7 +153,7 @@ namespace Ejercicio3
         {
             for (int i = 0; i < gusano.Count; i++)
             {
-                e.Graphics.FillRectangle(Brushes.Green, new Rectangle(gusano[i].X, gusano[i].Y, 10, 10));
+                e.Graphics.FillRectangle(Brushes.Blue, new Rectangle(gusano[i].X, gusano[i].Y, 10, 10));
             }
             e.Graphics.FillEllipse(Brushes.Red, new Rectangle(comida.X, comida.Y, 10, 10));
         }
