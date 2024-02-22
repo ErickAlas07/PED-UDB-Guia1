@@ -18,7 +18,10 @@ namespace Ejercicio2
         public Form1()
         {
             InitializeComponent();
-            area = picDibujo.CreateGraphics(); //Establecer el área de dibujo en el pictureBox  
+            area = picDibujo.CreateGraphics();
+            //Elementos que dependerán de la inclinación
+            txtInicio.Enabled = false;
+            txtFinal.Enabled = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -28,6 +31,7 @@ namespace Ejercicio2
 
         private void btnDraw_Click(object sender, EventArgs e)
         {
+            Boolean invalid = false;
             Pen lapicero = new Pen(Color.Black);
 
             switch(cmbColor.SelectedIndex)
@@ -38,18 +42,92 @@ namespace Ejercicio2
                 case 3: lapicero = new Pen(Color.Black); break;
             }
 
-            int iteraciones = int.Parse(txtCantidad.Text); //Cantidad de líneas a dibujar
-            int espacio = int.Parse(txtEspaciado.Text); //Espaciado asignado (en píxeles).
-
-            area.Clear(Color.White); //Limpiar área, es decir, lo pinta de color blanco
-
-            int puntoInicio = 50; //Inicia en un valor de y = 50
-
-            for(int i = 0; i < iteraciones; i++)
+            //Validaciones para el combobox de orientación de líneas
+            if (cmbOrientacion.SelectedIndex == -1)
             {
-                //Dibuja línea por línea de acuerdo al color dado, en x van de 20 a 300 y en "y" varía según iteración.
-                area.DrawLine(lapicero, 20, puntoInicio + (espacio * 1), 300, puntoInicio + (espacio * 1));
+                invalid = true;
+                lblRequired.Text = "Campo requerido";
             }
+            
+            else
+            {
+                lblRequired.Text = "";
+            }
+
+            if (cmbOrientacion.SelectedIndex == 2)
+            {
+                if (string.IsNullOrWhiteSpace(txtInicio.Text))
+                {
+                    invalid = true;
+                    lblError.Text = "Campo requerido";
+                }
+                else
+                {
+                    lblError.Text = "";
+                }
+
+                if (string.IsNullOrWhiteSpace(txtFinal.Text))
+                {
+                    invalid = true;
+                    lblError.Text = "Campo requerido";
+                }
+                else
+                {
+                    lblError.Text = "";
+                }
+            }
+
+            if (!invalid)
+            {
+
+                int iteraciones = int.Parse(txtCantidad.Text);
+                int espacio = int.Parse(txtEspaciado.Text);
+                int puntoinicio = 50, puntoFin = 50;
+
+                if (cmbOrientacion.SelectedIndex == 2)
+                {
+                    puntoinicio = int.Parse(txtInicio.Text);
+                    puntoFin = int.Parse(txtFinal.Text);
+                }
+
+                area.Clear(Color.White);
+
+                for (int i = 0; i < iteraciones; i++)
+                {
+                    if (cmbOrientacion.SelectedIndex == 1)
+                    {
+                        area.DrawLine(lapicero, puntoinicio + (espacio * i), 20, puntoFin + (espacio * i), 200);
+                    }
+                    else
+                    {
+                        area.DrawLine(lapicero, 20, puntoinicio + (espacio * i), 200, puntoFin + (espacio * i));
+                    }
+                }
+            }
+
+        }
+
+        private void cmbOrientacion_TextChanged(object sender, EventArgs e)
+        {
+            if (cmbOrientacion.SelectedIndex == 2)
+            {
+                txtInicio.Enabled = true;
+                txtFinal.Enabled = true;
+            }
+            else
+            {
+                txtInicio.Enabled = false;
+                txtFinal.Enabled = false;
+            }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }
