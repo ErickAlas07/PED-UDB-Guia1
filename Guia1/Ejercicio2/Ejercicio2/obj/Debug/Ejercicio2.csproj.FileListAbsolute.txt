@@ -1,0 +1,10 @@
+\\PROYECTOS\Users\Public\PED - UDB\Guia1\Ejercicio2\Ejercicio2\bin\Debug\Ejercicio2.exe.config
+\\PROYECTOS\Users\Public\PED - UDB\Guia1\Ejercicio2\Ejercicio2\bin\Debug\Ejercicio2.exe
+\\PROYECTOS\Users\Public\PED - UDB\Guia1\Ejercicio2\Ejercicio2\bin\Debug\Ejercicio2.pdb
+\\PROYECTOS\Users\Public\PED - UDB\Guia1\Ejercicio2\Ejercicio2\obj\Debug\Ejercicio2.csproj.AssemblyReference.cache
+\\PROYECTOS\Users\Public\PED - UDB\Guia1\Ejercicio2\Ejercicio2\obj\Debug\Ejercicio2.Form1.resources
+\\PROYECTOS\Users\Public\PED - UDB\Guia1\Ejercicio2\Ejercicio2\obj\Debug\Ejercicio2.Properties.Resources.resources
+\\PROYECTOS\Users\Public\PED - UDB\Guia1\Ejercicio2\Ejercicio2\obj\Debug\Ejercicio2.csproj.GenerateResource.cache
+\\PROYECTOS\Users\Public\PED - UDB\Guia1\Ejercicio2\Ejercicio2\obj\Debug\Ejercicio2.csproj.CoreCompileInputs.cache
+\\PROYECTOS\Users\Public\PED - UDB\Guia1\Ejercicio2\Ejercicio2\obj\Debug\Ejercicio2.exe
+\\PROYECTOS\Users\Public\PED - UDB\Guia1\Ejercicio2\Ejercicio2\obj\Debug\Ejercicio2.pdb
